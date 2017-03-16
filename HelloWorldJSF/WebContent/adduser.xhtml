@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Add User</title>
+</head>
+<body>
+    <h:form>
+        <h2>Add User</h2>
+        <div>
+            <h:outputLabel for="firstName">First Name</h:outputLabel>
+        </div>
+        <div>
+            <h:inputText id="firstName" label="First Name"
+                value="#{userBeanConv.firstName}"></h:inputText>
+        </div>
+        <div>
+            <h:outputLabel for="lastName">Last Name</h:outputLabel>
+        </div>
+        <div>
+            <h:inputText id="lastName" label="Last Name"
+                value="#{userBeanConv.lastName}"></h:inputText>
+        </div>
+        <div>
+            <h:outputLabel for="age">Age</h:outputLabel>
+        </div>
+        <div>
+            <h:inputText id="age" label="age" value="#{userBeanConv.age}">
+            </h:inputText>
+        </div>
+        <div>
+        	<h:outputLabel for="dateOfBirth"> Date of Birth (dd-mm-yyyy) </h:outputLabel>
+        </div>
+        <div>
+        	<h:inputText id="dateOfBirth" label="Date of birth" value="#{userBeanConv.dateOfBirth}" >
+				<f:convertDateTime pattern="dd-mm-yyyy" ></f:convertDateTime>        		
+        	</h:inputText>
+        </div>
+        <div>
+            <h:outputLabel for="height">Height</h:outputLabel>
+        </div>
+        <div>
+            <h:inputText id="height" label="Height" value="#{userBeanConv.height}">
+            </h:inputText>
+        </div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>
+            <h:commandButton value="Submit" action="viewuser"></h:commandButton>
+        </div>
+    </h:form>
+</body>
+</html>

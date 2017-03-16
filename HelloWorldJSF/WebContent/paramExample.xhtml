@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+<h:head>
+	<title>JSF Param Example</title>
+</h:head>
+
+	<h:form id ="form">
+	
+		Please insert your name: <h:inputText size="10" value="#{userBean.userName}" ></h:inputText>
+		<br/>
+		<h:commandButton id="submit" value="Submit" action="#{userBean.outcome}" >
+			<f:param name="country" value="Greece" ></f:param>
+		</h:commandButton>
+		
+		<br/>
+		
+		<!-- Actionlistener do not forward to another page -->
+		<h:commandButton value="Submit password"  actionListener="#{userBean.actionListernerExample}" >
+			<f:attribute name="password" value="test123" ></f:attribute>
+		</h:commandButton>
+
+	</h:form>
+
+<h:body>
+</h:body>
+
+</html>

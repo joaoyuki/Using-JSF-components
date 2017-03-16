@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+<h:head>
+	<title>JSF Componentes Example</title>
+</h:head>
+
+	<h:form>
+	
+		<h1> JSF 2.0 - Components Example - Response page </h1>
+		
+		<h:inputText value="#{userBean.userName}"></h:inputText><br/>
+		<h:inputText value="#{userBean.password}" ></h:inputText><br/>
+		<h:inputTextarea value="#{userBean.address}" cols="20" rows="10" ></h:inputTextarea>
+		
+		<ol>
+			<li> carBean.favoritedCar1 : #{carBean.favoriteCar1} </li>
+			<li> carBean.favoritedCar2 : #{carBean.favoriteCar2} </li>
+			<li> carBean.favoritedCar3 : #{carBean.favoriteCar3} </li>
+		</ol>
+		
+		<ol>
+			<li> carBean.favoriteCar4 : #{carBean.favoriteCar4InString} </li>
+			<li> carBean.favoriteCar5 : #{carBean.favoriteCar5InString} </li>
+		</ol>
+		
+		<br/>		
+		carBean.favoriteCar6 : #{carBean.favoriteCar6InString}
+	
+	</h:form>
+
+<h:body>
+</h:body>
+
+</html>

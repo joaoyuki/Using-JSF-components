@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+<h:head>
+	<title>JSF Messages Example</title>
+</h:head>
+
+	<h:form>
+	
+		Enter the user name:
+		<h:inputText id="username" value="#{userBean.userName}" size="20" required="true" label="UserName" >
+			<f:validateLength minimum="4" maximum="12" ></f:validateLength>
+		</h:inputText>
+		
+		<h:commandButton value="Submit" action="result" ></h:commandButton>
+		
+		<h:message for="username" style="color:blue" ></h:message>
+
+	</h:form>
+
+<h:body>
+</h:body>
+
+</html>
